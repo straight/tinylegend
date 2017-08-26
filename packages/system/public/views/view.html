@@ -1,0 +1,38 @@
+<section data-ng-controller="PlayersController" data-ng-init="findOne()">
+  <div class="container">
+  <table class="table table-striped">
+    <tbody>
+      <tr>
+        <td>Name</td>
+        <td>{{player.name}}</td>
+      </tr>
+      <tr>
+        <td>Job</td>
+        <td>{{player.job}}</td>
+      </tr>
+      <tr>
+        <td>Level</td>
+        <td>{{player.lv}}</td>
+      </tr>
+      <tr>
+        <td>HP</td>
+        <td>{{player.hp}}</td>
+      </tr>
+      <tr>
+        <td>EXP</td>
+        <td>{{player.exp}}</td>
+      </tr>
+      <tr>
+        <td>Honor</td>
+        <td>{{player.honor}}</td>
+      </tr>
+    </tbody>
+    </table>  
+  <a class="btn" href="/#!/players/{{player._id}}/edit">
+            <i class="glyphicon glyphicon-edit"></i>
+          </a>
+          <a class="btn" data-ng-click="remove(player);">
+            <i class="glyphicon glyphicon-trash"></i>
+          </a>
+</div>
+</section>

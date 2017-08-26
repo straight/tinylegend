@@ -1,0 +1,69 @@
+<section data-ng-controller="PlayersController" data-ng-init="findOne()">
+  <form name="playerForm" class="form-horizontal col-md-6" role="form" data-ng-submit="update(playerForm.$valid)" novalidate>
+    <div class="form-group" ng-class="{ 'has-error' : submitted && playerForm.name.$invalid }">
+      <label mean-token="'edit-name'" for="name" class="col-md-2 control-label">Name</label>
+      <div class="col-md-10">
+        <input name="name" type="text" class="form-control" data-ng-model="player.name" id="name" placeholder="Name" required>
+        <div ng-show="submitted && playerForm.name.$invalid" class="help-block">
+          <p ng-show="playerForm.name.$error.required">Name is required</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group" ng-class="{ 'has-error' : submitted && playerForm.job.$invalid }">
+      <label mean-token="'edit-job'" for="job" class="col-md-2 control-label">Job</label>
+      <div class="col-md-10">
+        <input name="job" type="text" class="form-control" data-ng-model="player.job" id="job" placeholder="Job" required>
+        <div ng-show="submitted && playerForm.job.$invalid" class="help-block">
+          <p ng-show="playerForm.job.$error.required">Job is required</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group" ng-class="{ 'has-error' : submitted && playerForm.lv.$invalid }">
+      <label mean-token="'edit-lv'" for="lv" class="col-md-2 control-label">Level</label>
+      <div class="col-md-10">
+        <input name="lv" type="text" class="form-control" data-ng-model="player.lv" id="lv" placeholder="Lv" required>
+        <div ng-show="submitted && playerForm.lv.$invalid" class="help-block">
+          <p ng-show="playerForm.lv.$error.required">Level is required</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group" ng-class="{ 'has-error' : submitted && playerForm.hp.$invalid }">
+      <label mean-token="'edit-hp'" for="hp" class="col-md-2 control-label">HP</label>
+      <div class="col-md-10">
+        <input name="hp" type="text" class="form-control" data-ng-model="player.hp" id="hp" placeholder="HP" required>
+        <div ng-show="submitted && playerForm.hp.$invalid" class="help-block">
+          <p ng-show="playerForm.hp.$error.required">HP is required</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group" ng-class="{ 'has-error' : submitted && playerForm.exp.$invalid }">
+      <label mean-token="'edit-exp'" for="exp" class="col-md-2 control-label">EXP</label>
+      <div class="col-md-10">
+        <input name="exp" type="text" class="form-control" data-ng-model="player.exp" id="exp" placeholder="EXP" required>
+        <div ng-show="submitted && playerForm.exp.$invalid" class="help-block">
+          <p ng-show="playerForm.exp.$error.required">EXP is required</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group" ng-class="{ 'has-error' : submitted && playerForm.honor.$invalid }">
+      <label mean-token="'edit-honor'" for="honor" class="col-md-2 control-label">Honor</label>
+      <div class="col-md-10">
+        <input name="honor" type="text" class="form-control" data-ng-model="player.honor" id="honor" placeholder="Honor" required>
+        <div ng-show="submitted && playerForm.honor.$invalid" class="help-block">
+          <p ng-show="playerForm.honor.$error.required">Honor is required</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <div class="col-md-offset-2 col-md-10">
+        <button mean-token="'edit-submit'" type="submit" class="btn btn-default">Submit</button>
+      </div>
+    </div>
+  </form>
+</section>

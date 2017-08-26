@@ -1,0 +1,136 @@
+<section data-ng-controller="IndexController">
+
+<script>
+var myArray = ['平凡的一天',
+				'喜樂的一天，全體同學經驗值雙倍', 
+				'仁愛的一天，全體同學懲罰減半', 
+				'忍耐的一天，全體同學懲罰雙倍', 
+				'痛苦的一天，全體同學扣2點生命值',
+				'智慧的一天，答中IQ題的同學加10點經驗值',
+				'憐憫的一天，等級最低的同學經驗值三倍',
+				'公義的一天，表現最差的同學多扣4點生命值',
+				'恩慈的一天，抽事件的同學生命值和經驗值互換',
+				'節制的一天，戰士同學是日不能找同學代替回答',
+				'節制的一天，牧師同學是日不能使用回復的技能',
+				'節制的一天，詩人同學是日遲到扣4點生命值',
+				'敬虔的一天，當天協助祈禱的同學加5點經驗值',
+				];
+var targetArray = [	'全體同學',
+	'答中IQ題的同學',
+	'等級最低的同學',
+	'等級最高的同學',
+	'生命值最低的同學',
+	'抽事件的同學',
+	'戰士同學',
+	'牧師同學',
+	'詩人同學',
+	'士師同學',
+	'先知同學',
+	'學者同學',
+	'男同學',
+	'女同學',
+	'當天協助祈禱的同學',
+	];
+var eventArray = ['過了平凡的一天',
+	'經驗值雙倍',
+	'懲罰減半',
+	'懲罰雙倍',
+	'扣2點生命值',
+	'加10點經驗值',
+	'生命值和經驗值互換',
+	'所有技能無效',
+];
+function startTimer (intInterval) {
+    if (intInterval < 2000)
+    {
+		//spnResult.innerText=myArray[Math.floor(Math.random() * myArray.length)];
+		spnResult.innerText=targetArray[Math.floor(Math.random() * targetArray.length)] + eventArray[Math.floor(Math.random() * eventArray.length)];
+		intInterval = Math.floor(intInterval * 1.5);
+	    setTimeout(function(){startTimer(intInterval);},intInterval);
+    }else
+	{
+		btnGenerate.disabled = false;
+	}
+	return;
+}
+
+
+function generate()
+{
+	btnGenerate.disabled = true;
+	startTimer(5);
+	return;
+}
+</script>
+<div class="jumbotron">
+  <h1 mean-token="'home-default'">生活應用大作戰</h1>
+</div>
+<center>
+		<h2>是日事件:
+		<span id="spnResult">無</span></h2>
+		<p>
+		<input class="btn btn-default" type="button" id="btnGenerate" value="開始" onclick="generate()"></input> 
+		</p>
+		<p>
+	  <!--
+	<div class="panel panel-default">
+		<div class="panel-heading">事件一覽:</div>
+		<ul class="list-group">
+		<li class="list-group-item">平凡的一天</li>
+		<li class="list-group-item">喜樂的一天，全體同學經驗值雙倍</li>
+		<li class="list-group-item">仁愛的一天，全體同學懲罰減半</li>
+		<li class="list-group-item">忍耐的一天，全體同學懲罰雙倍</li>
+		<li class="list-group-item">痛苦的一天，全體同學扣2點生命值</li>
+		<li class="list-group-item">智慧的一天，答中IQ題的同學加10點經驗值</li>
+		<li class="list-group-item">憐憫的一天，等級最低的同學經驗值三倍</li>
+		<li class="list-group-item">公義的一天，表現最差的同學多扣4點生命值</li>
+		<li class="list-group-item">恩慈的一天，抽事件的同學生命值和經驗值互換</li>
+		<li class="list-group-item">節制的一天，戰士同學是日不能找同學代替回答</li>
+		<li class="list-group-item">節制的一天，牧師同學是日不能使用回復的技能</li>
+		<li class="list-group-item">節制的一天，詩人同學是日遲到扣4點生命值</li>
+		<li class="list-group-item">敬虔的一天，當天協助祈禱的同學加5點經驗值</li>
+		</ul>
+	</div>
+	-->
+	  <div class="row">
+		  <div class="col-md-6">
+			  <div class="panel panel-default">
+				  <div class="panel-heading">對象一覽</div>
+				  <ul class="list-group">
+					  <li class="list-group-item">全體同學</li>
+					  <li class="list-group-item">答中IQ題的同學</li>
+					  <li class="list-group-item">等級最低的同學</li>
+					  <li class="list-group-item">等級最高的同學</li>
+					  <li class="list-group-item">生命值最低的同學</li>
+					  <li class="list-group-item">抽事件的同學</li>
+					  <li class="list-group-item">戰士同學</li>
+					  <li class="list-group-item">牧師同學</li>
+					  <li class="list-group-item">詩人同學</li>
+					  <li class="list-group-item">士師同學</li>
+					  <li class="list-group-item">先知同學</li>
+					  <li class="list-group-item">學者同學</li>
+					  <li class="list-group-item">男同學</li>
+					  <li class="list-group-item">女同學</li>
+					  <li class="list-group-item">當天協助祈禱的同學</li>
+				  </ul>
+			  </div>
+		  </div>
+		  <div class="col-md-6">
+			  <div class="panel panel-default">
+				  <div class="panel-heading">事件一覽</div>
+				  <ul class="list-group">
+					  <li class="list-group-item">過了平凡的一天</li>
+					  <li class="list-group-item">經驗值雙倍</li>
+					  <li class="list-group-item">懲罰減半</li>
+					  <li class="list-group-item">懲罰雙倍</li>
+					  <li class="list-group-item">扣2點生命值</li>
+					  <li class="list-group-item">加10點經驗值</li>
+					  <li class="list-group-item">生命值和經驗值互換</li>
+					  <li class="list-group-item">所有技能無效</li>
+				  </ul>
+			  </div>
+		  </div>
+	  </div>
+		</p>
+</center>
+</section>

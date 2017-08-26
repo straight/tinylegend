@@ -1,0 +1,39 @@
+<section data-ng-controller="PlayersController" data-ng-init="find()">
+<div class="page-header">
+	<h1>排行榜</h1>
+</div>
+<div class="container">
+	<table class="table table-striped">
+    <thead>
+      <tr>
+        <th>排名</th>
+        <th>姓名</th>
+        <th>職業</th>
+        <th>等級</th>
+        <th>生命值</th>
+        <th>經驗值</th>
+        <th>榮譽點</th>
+		<th data-ng-show="global.authenticated"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr data-ng-repeat="player in players">
+        <td>{{$index + 1}}</td>
+      	<td>{{player.name}}</td>
+      	<td>{{player.job}}</td>
+      	<td>{{player.lv}}</td>
+      	<td>{{player.hp}}</td>
+      	<td>{{player.exp}}</td>
+      	<td>{{player.honor}}</td>
+		<td data-ng-show="global.authenticated"><a class="btn" href="/#!/players/{{player._id}}/edit">
+            <i class="glyphicon glyphicon-edit"></i>
+          </a>
+          <a class="btn" data-ng-click="remove(player);">
+            <i class="glyphicon glyphicon-trash"></i>
+          </a></td>
+      </tr>
+    </tbody>
+  	</table> 	
+	<h3 data-ng-show="global.authenticated"><a href="/#!/players/create">新增</a></h3>
+</div>
+</section>

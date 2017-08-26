@@ -1,0 +1,183 @@
+<section data-ng-controller="IndexController">
+<div class="page-header">
+	<h1>介紹</h1>
+</div>
+	<div class="panel panel-default">
+		<div class="panel-heading">入門職業</div>
+		<div class="panel-body">
+			<div class="row">
+				<div class="col-md-3">
+					平民<br>
+					<img src="system/assets/img/beginner.jpg" height="150">
+				</div>
+				<div class="col-md-9">
+					技能:<br>
+					敬業樂業 (榮譽點雙倍)<br>
+					與世無爭 (不受其他技能影響)<br>
+					風平浪靜 (不受隨機事件影響)<br>
+				</div>
+			</div>
+		</div>
+	</div>
+<div class="panel panel-default">
+  	<div class="panel-heading">初階職業</div>
+  	<div class="panel-body">
+		<div class="row">
+		    <div class="col-md-3">
+		    	戰士<br>
+		    	<img src="system/assets/img/warrior.png" height="150">
+		    </div>
+		    <div class="col-md-9">
+		    	技能:<br>
+		    	孔武有力 (每次幫忙預備枱櫈可獲5點經驗)<br>
+		    	體魄壯健 (有30點生命值)<br>
+		    	同心協力 (老師的問題可指定一位同學代答，經驗值和同學各分一半)<br>
+		    </div>
+		</div>
+		<div class="row">
+		    <div class="col-md-3">
+		    	牧師<br>
+		    	<img src="system/assets/img/priest.png" height="150">
+		    </div>
+		    <div class="col-md-9">
+		    	技能:<br>
+		    	聖經知識 (每次幫忙預備聖經可獲5點經驗)<br>
+		    	開卷有益 (背金句可以有一次提示)<br>
+		    	濟世為懷 (每堂結束時可幫一位自己以外的同學生命值加10點)<br>
+		    </div>
+		</div>
+		<div class="row">
+		    <div class="col-md-3">
+		    	詩人<br>
+		    	<img src="system/assets/img/bard.png" height="150">
+		    </div>
+		    <div class="col-md-9">
+		    	技能:<br>
+		    	祈禱之歌 (每次幫忙開始或結束祈禱可獲10點經驗)<br>
+		    	回歸之歌 (遲到只扣生命值2點)<br>
+		    	智慧之歌 (可補答問題，經驗值可得一半)<br>
+		    </div>
+		</div>
+	</div>
+</div>
+<div class="panel panel-default">
+  	<div class="panel-heading">進階職業</div>
+  	<div class="panel-body">
+		<div class="row">
+			<div class="col-md-3">
+		    	士師<br>
+		    	<img src="system/assets/img/leader.png" height="150">
+		    </div>
+		    <div class="col-md-9">
+		    	技能:<br>
+		    	與主同在 (在知道當天的隨機事件後,可改為平凡的一天)<br>
+		    	體魄強健 (有25點生命值)<br>
+		    	捨身成仁 (可將其中一位同學的當天扣減的生命值轉到自己身上)<br>
+		    </div>
+		</div>
+		<div class="row">
+			<div class="col-md-3">
+		    	先知<br>
+		    	<img src="system/assets/img/prophet.png" height="150">
+		    </div>
+		    <div class="col-md-9">
+		    	技能:<br>
+		    	榜樣之義 (每次課堂懲罰雙倍, 但不和隨機事件疊加)<br>
+		    	領導之責 (下課時需要導師收拾枱櫈/聖經, 或結束祈禱時扣4 點生命值)<br>
+		    	獎罰分明 (指出一個自己以外的同學的好/壞行為(+5/-2), 可獲5點經驗值)<br>
+		    </div>
+
+		</div>
+		<div class="row">
+			<div class="col-md-3">
+		    	學者<br>
+		    	<img src="system/assets/img/scholar.png" height="150">
+		    </div>
+		    <div class="col-md-9">
+		    	技能:<br>
+		    	氣虛力弱 (只有10點生命值)<br>
+		    	學富五車 (答對問題經驗雙倍, 即4點, 但不和隨機事件疊加)<br>
+		    	忙中有錯 (答錯問題倒扣2點經驗值)<br>
+		    </div>
+			
+		</div>
+	</div>
+
+</div>
+	<div class="panel panel-default">
+		<div class="panel-heading">終極職業</div>
+		<div class="panel-body">
+			<div class="row">
+				<div class="col-md-3">
+					天使<br>
+					<img src="system/assets/img/angel.png" height="150">
+				</div>
+				<div class="col-md-9">
+					技能:<br>
+					無盡守護 (生命值扣減與扣減最多的同學一樣)<br>
+					神聖榮耀 (將當日的經驗值轉贈給某一同學後可獲得一點榮譽點)<br>
+					奇妙恩典 (使用一點榮譽點換20點生命值或當日自己的經驗值雙倍)<br>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-3">
+					聖徒<br>
+					<img src="system/assets/img/disciple.png" height="150">
+				</div>
+				<div class="col-md-9">
+					技能:<br>
+					榮耀歸主 (每次課堂自動流失一點榮譽點, 榮譽點為零時變回平民)<br>
+					禱告大能 (可選使用任何職業技能一次)<br>
+					主內一家 (可阻止一次任何一位同學使用的一項技能)<br>
+				</div>
+			</div>
+		</div>
+	</div>
+<div class="row">
+	<div class="col-md-3">
+		<div class="panel panel-default">
+		 	<div class="panel-heading">基本規則</div>
+		  	<div class="panel-body">
+			生命值 20點<br>
+			升級需要20點經驗值<br>
+			生命值減至零時降一級，生命值回滿<br>
+			每次落堂前結算，表現最好的同學有機會獲得一點榮譽點<br>	
+			每次上堂前會產生當天的隨機事件
+		  	</div>
+		</div>
+	</div>
+	<div class="col-md-3">
+		<div class="panel panel-default">
+		 	<div class="panel-heading">經驗值獲得方法</div>
+		  	<div class="panel-body">
+			背金句加5點<br>
+			完成功課加5點<br>
+			回答課堂問題加1-4點<br>
+			使用相關職業技能<br>
+		  	</div>
+		</div>
+	</div>
+	<div class="col-md-3">
+		<div class="panel panel-default">
+		 	<div class="panel-heading">生命值扣減方法</div>
+		  	<div class="panel-body">
+			遲到扣4點<br>
+			打擾其他同學上課扣10點<br>
+			其他影響課堂秩序的因應情況扣4-10點不等<br>
+		  	</div>
+		</div>
+	</div>
+	<div class="col-md-3">
+		<div class="panel panel-default">
+		 	<div class="panel-heading">轉職相關</div>
+		  	<div class="panel-body">
+			每3點榮譽點可以轉職一次<br>
+			同階的職業可以任意轉換<br>
+			初階職業升階的只能升特定的進階職業 (戰士升士師，牧師升先知，詩人升學者)<br>
+			進階職業全部都能升天使<br>
+		  	</div>
+
+		</div>
+	</div>
+</div>
+</section>
